@@ -31,6 +31,23 @@ npm run start:web
 npm run start
 ```
 
+## Customizing the candidate data
+
+To customize the candidate data, you can set the following environment variables in your environment or in a `.env` file at the root of your project:
+
+- `CONTACT_EMAIL`: The contact email address for the server.
+- `MAILGUN_API_KEY`: The API key for Mailgun, used for sending emails.
+- `MAILGUN_DOMAIN`: The domain for Mailgun, used for sending emails.
+- `CANDIDATE_NAME`: The name of the candidate.
+- `RESUME_URL`: The URL to the candidate's resume in PDF format.
+- `LINKEDIN_URL`: The URL to the candidate's LinkedIn profile.
+- `GITHUB_URL`: The URL to the candidate's GitHub profile.
+- `WEBSITE_URL`: The URL to the candidate's personal website.
+
+These variables are used to configure the server and customize the candidate's information that is served by the MCP server. Make sure to restart the server after making changes to these variables for them to take effect.
+
+You can also update them directly in `src/config.ts`.
+
 ## Development
 
 ```bash
