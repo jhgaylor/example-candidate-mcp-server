@@ -23,6 +23,12 @@ cd example-candidate-mcp-server
 
 # Install dependencies
 npm install
+
+# Start the http transport
+npm run start:web
+
+# Start the stdio transport
+npm run start
 ```
 
 ## Development
