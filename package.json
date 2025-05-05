@@ -1,0 +1,38 @@
+{
+  "name": "example-candidate-mcp-server",
+  "version": "1.2.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "start:web": "node dist/index.js --transport=http",
+    "dev": "nodemon --watch src --ext ts --exec 'npm run build && npm start'",
+    "dev:web": "nodemon --watch src --ext ts --exec 'npm run build && npm run start:web'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "bin": {
+    "me-mcp": "./dist/index.js"
+  },
+  "author": "Jake Gaylor",
+  "repository": "https://github.com/jhgaylor/jakegaylor-com-mcp-server",
+  "license": "MIT",
+  "description": "A stateless Model Context Protocol (MCP) server built with Express and TypeScript that gives LLMs information about Jake Gaylor.",
+  "dependencies": {
+    "@jhgaylor/candidate-mcp-server": "^1.2.1",
+    "@modelcontextprotocol/sdk": "^1.0.1",
+    "cheerio": "^1.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2",
+    "express-mcp-handler": "^0.1.1",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.24",
+    "@types/pdf-parse": "^1.1.5",
+    "nodemon": "^3.0.3",
+    "typescript": "^5.8.3"
+  }
+}
